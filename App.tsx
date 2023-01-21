@@ -1,5 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
+import './src/lib/dayjs';
 
+import { StatusBar } from 'expo-status-bar';
 import { Home } from './src/screens/Home';
 import { Loading } from './src/components/Loading';
 
