@@ -1,5 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { Home } from './src/screens/Home';
+import { Loading } from './src/components/Loading';
+
 import {
     useFonts,
     Inter_400Regular,
@@ -7,8 +10,6 @@ import {
     Inter_700Bold,
     Inter_800ExtraBold
 } from '@expo-google-fonts/inter';
-
-import { Loading } from './src/components/Loading';
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -25,22 +26,9 @@ export default function App() {
     }
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello World!</Text>
+    <>
+      <Home />
       <StatusBar style="auto" />
-    </View>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#09090A',
-    alignItems: 'center',
-    justifyContent: 'center',
-    },
-    text: {
-        color: '#FFF',
-        fontFamily: 'Inter_800ExtraBold'
-    }
-});
